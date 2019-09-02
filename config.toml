@@ -18,7 +18,7 @@ disqusShortname = "Adesina" # Enable or disable Disqus.
     info = "SOFTWARE ENGINEER" # Author's job title or info.
     description = "Adesina Hammed Hassan's personal website" # Site description.
     keywords = "blog,engineer,developer,personal" # Site keywords.
-    avatarurl = "images/avatar.jpg" # Contain the path of the optionnal avatar in the static folder.
+    avatarurl = "images/me.jpg" # Contain the path of the optionnal avatar in the static folder.
 
     footercontent = "Enter a text here." # Add footer content
     fixedbarContent = "Do you want to know me more private?→" # Add fixedbar content
