@@ -19,7 +19,7 @@ enableRobotsTXT = true
     author = "Adeshina"
     title = "Software Development Engineer"
     # description = "..."
-    authorimage = "/img/avatar.png"
+    authorimage = "avatar.png"
     dateformat = "Jan 2, 2006"
 
     # sidebar, copyright & license
