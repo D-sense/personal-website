@@ -81,6 +81,17 @@ As a Frontend Developer, my duties included:
 -----------------------------------
 
 
+Talks & Events:
+-
+
+* I co-host Go Meetup in nigeria (Lagos) on a monthly basis.
+* ADVANTAGES OF ADOPTING GO AS YOUR MAIN STACK.
+October, 2019 — Advantages of Adopting Go as your main stack ( with focus on application vertical scaling). At Go Meetup Nigeria. [Info](https://www.meetup.com/GolangNigeria/events/265507431/).
+* RESTFUL API & LOCAL STORAGE CONSUMPTION IN FLUTTER.
+January, 2019 — RESTful API and Local Storage Consumption in Flutter. At Flutter Lagos Meetup. [Info](https://docs.google.com/presentation/d/1aNT9xlc8wNSlKa_y_Hj4s7SIU7dOFXFHH0X9P8afB14/edit#slide=id.gc6f9e470d_0_0).
+
+
+
 Education:
 -
 
