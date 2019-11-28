@@ -10,7 +10,7 @@ weight: 10
 
 ## Introduction
 
-This tutorial will show you how to handle sending SMS in Go to Nigeria phone numbers with ease. To be specific, in the last two API services I programmed for a Nigerian client, part of the requirements is the ability to send SMS to customers with full consideration of cost. This means, to get cheap rate for eash SMS sent there has to be an integration with local SMS vendors. As a result, I created this [client package](https://github.com/D-sense/sms-nigeria-go) to implement this feature. Currently, the package supports two vendors, namely [Bulk SMS Nigeria](https://www.bulksmsnigeria.com/) and [SMS Clone](http://smsclone.com).
+This tutorial will show you how to handle sending SMS in Go to Nigeria phone numbers with ease. To be specific, in the last two API services I programmed for a Nigerian client, part of the requirements is the ability to send SMS to customers with without attracting a noticeable cost. This means, to get a very cost rate for eash SMS sent, there has to be an integration with local SMS vendors. As a result, I created this [client package](https://github.com/D-sense/sms-nigeria-go) to implement this feature. Currently, the package supports two vendors, namely [Bulk SMS Nigeria](https://www.bulksmsnigeria.com/) and [SMS Clone](http://smsclone.com).
 
 ### Requirement
 
@@ -30,7 +30,7 @@ go get github.com/d-sense/sms-nigeria-go
 "github.com/d-sense/sms-nigeria-go"
 ```
 
-In the .go (this may be the main.go or any other file in which you want to add the SMS service)file, declare and initialize the notification service (service could be any of the vendors you have registered with), and send data:
+In the .go (this may be the main.go or any other file in which you want to add the SMS service) file, declare and initialize the notification service (service could be any of the supported vendors you have registered with), and send data:
 
 ##### *Bulk SMS Nigeria vendor  --> [register and redeem your account here](https://www.bulksmsnigeria.com/)
 
