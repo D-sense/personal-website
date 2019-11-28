@@ -3,8 +3,8 @@ author: "Adeshina Hassan"
 date: 2019-09-01
 linktitle: Sending SMS in Golang
 title: Sending SMS in Golang to Nigeria Phone Numbers
-categories: ["go"]
-tags: ["sms", "go", "nigeria", "backend"]
+categories: ["Go", "Golang"]
+tags: ["sms", "go", "golang", "nigeria", "backend"]
 weight: 10
 ---
 

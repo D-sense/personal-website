@@ -1,6 +1,6 @@
 +++
 title = "About me"
-date = false
+date = "2014-04-09"
 +++
 
 Hi, I am Adesina Hammed Hassan! I work with Payment Applications and Business Automation Technology (IT), [Sterling Bank PLC](https://sterling.ng), Head Office Nigeria.
@@ -22,7 +22,7 @@ Technology Stacks:
 * Database: MySQL, PostgreSQL, MariaDB, and Redis.
 * Infrastructure: AWS (EC2), GCP, Digital Ocean, and Laravel Forge, Docker, Kubernetes(basic), and Git.
 * Operating Syetm: Linux, MacOS, and Widnows.
-* Experience in RESTful API, concurrency, distributed system and micro-services development. Clean, clear and well-tested code.
+* Experience in Web and RESTful services, concurrency, distributed system and micro-services development. Clean, clear and well-tested code.
 
 
 -----------------------------------

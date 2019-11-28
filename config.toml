@@ -14,7 +14,6 @@ enableRobotsTXT = true
 
 #paginate = 5
 
-
 ## Site Settings
 [params]
     author = "Adeshina"
@@ -31,6 +30,8 @@ enableRobotsTXT = true
     enableFacebookShare = true
     itemscentered = true
     langseparator = "|"
+    themeColor = "theme-base-0d"
+
 
 
     # sidebar, copyright & license
@@ -61,7 +62,7 @@ enableRobotsTXT = true
 ## Main Menu
 [[menu.main]]
     name = "Posts"
-    weight = 100
+    weight = 1
     identifier = "posts"
     url = "/posts/"
 [[menu.main]]
@@ -73,4 +74,4 @@ enableRobotsTXT = true
     name = "About"
     identifier = "about"
     weight = 300
-    url = "about"
+    url = "/about/"
