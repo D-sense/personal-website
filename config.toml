@@ -18,7 +18,7 @@ enableRobotsTXT = true
 [params]
     author = "Adeshina"
     title = "Software Development Engineer"
-    # description = "..."
+    description = "Software Development Engineer"
     authorimage = "img/avatar.png"
     dateformat = "Jan 2, 2006"
 
@@ -28,7 +28,7 @@ enableRobotsTXT = true
 
     # https://highlightjs.org
     highlightjs = true
-    highlightjsstyle = "github"
+    #highlightjsstyle = "github"
     
     # please choose either GraphComment or Disqus or Utterances
     #GraphCommentId = "..."
