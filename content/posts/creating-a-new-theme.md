@@ -1136,7 +1136,7 @@ $ vi themes/zafta/layouts/post/single.html
   {{ .Content }}
 
 {{ partial "footer.html" . }}
-:wq
+:wq 
 
 ```
 

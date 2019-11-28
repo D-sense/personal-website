@@ -3,7 +3,7 @@ title: "SMS-Client-Nigeria"
 description: "An SMS Client package"
 link: https://github.com/D-sense/sms-nigeria-go
 screenshot: sms.png
-date: '2018-01-19'
+date: '2019-11-22'
 layout: portfolio
 ---
 

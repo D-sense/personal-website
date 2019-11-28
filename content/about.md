@@ -12,23 +12,20 @@ I am deeply in love with open source and working to get more involved, specifica
 *[side-project] Currently I’m re-writing [ReportPools](https://reportspool.com) in Go and Vue.js; a database for reporting missing and found people and properties. For missing or found people, the service uses Computer Vision (CV) to identify if the picture that accominies the report exists in our database. If it does, it would connect the reporter with the existing report/post. For non-human, it uses text processing to conduct matching between the new report against existing reports in our database.
 
 
-<!-- I’m non-binary and use they/them/their pronouns. -->
------------------------------------
------------------------------------
------------------------------------
 
-Past Employers:
--
 
-[Sterling Bank PLC](https://sterling.ng) [Payment Applications and Business Automation Technology (IT)]. February 2019 - Till date.
+<!-- Past Employers:
+- -->
+
+<!-- [Sterling Bank PLC](https://sterling.ng) [Payment Applications and Business Automation Technology (IT)]. February 2019 - Till date.
 
 As a Full-stack engineer (Go, .NET, and Vue.js), I have worked on three products (so far), including:
 
 * [Business Support Financing](http://bsfweb.sterlingapps.p.azurewebsites.net); a loan platofrm for SME — written in Vue.js framework.
 * [EveryNanny](https://everynannyng.com); it provides parents with caregivers  within the country) — written in .NET framework.
 * [I-Invest](https://i-investng.com) : an ETL CLI tool (Extract, Transform and Load) for the bank to interact with data from various servers — written in Go.
-* [SMS client package](https://github.com/D-sense/sms-nigeria-go): a client package for sending SMS to Nigerian phone numbers. We used the package internally and also open-sourced — written in Go.
-
+* [SMS client package](https://github.com/D-sense/sms-nigeria-go): a client package for sending SMS to Nigerian phone numbers. We used the package internally and also open-sourced — written in Go. -->
+<!-- 
 -----------------------------------
 
 [IderaOS E-commerce Platform](https://ideraos.com). November 24, 2018 — August 2019:
@@ -73,10 +70,9 @@ As a Program Advisor (Part-time and remote), my duties included:
 As a Frontend Developer, my duties included:
 
 * Developed user interface for various web applications.
-* Worked with UI/UX designer to craft suitable design for various products.
+* Worked with UI/UX designer to craft suitable design for various products. -->
 
 
------------------------------------
 -----------------------------------
 -----------------------------------
 
@@ -90,6 +86,9 @@ October, 2019 — Advantages of Adopting Go as your main stack ( with focus on a
 * RESTFUL API & LOCAL STORAGE CONSUMPTION IN FLUTTER.
 January, 2019 — RESTful API and Local Storage Consumption in Flutter. At Flutter Lagos Meetup. [Info](https://docs.google.com/presentation/d/1aNT9xlc8wNSlKa_y_Hj4s7SIU7dOFXFHH0X9P8afB14/edit#slide=id.gc6f9e470d_0_0).
 
+
+-----------------------------------
+-----------------------------------
 
 
 Education:
