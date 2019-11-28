@@ -1,5 +1,5 @@
 ## Basic Configuration
-baseurl = "https://adeshinahassan.com"
+baseurl = "https://adeshinahassan.com/"
 languageCode = "en"
 
 title = "Adeshina"
@@ -20,7 +20,7 @@ enableRobotsTXT = true
     author = "Adeshina"
     title = "Software Engineer"
     description = "Software Engineer"
-    authorimage = "/img/avatar.png"
+    authorimage = "img/avatar.png"
     dateformat = "Jan 2, 2006"
     keywords = "blog,developer,engineering, go, golang, flutter, devOps, frontend, backend"
     info = "WEB AND APPS ENGINEER"
