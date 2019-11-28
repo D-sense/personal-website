@@ -1,5 +1,5 @@
 ## Basic Configuration
-baseurl = "https://adeshinahassan.com/"
+baseurl = "https://adeshinahassan.com"
 languageCode = "en"
 
 title = "Adeshina"
@@ -14,13 +14,24 @@ enableRobotsTXT = true
 
 #paginate = 5
 
+
 ## Site Settings
 [params]
     author = "Adeshina"
-    title = "Software Development Engineer"
-    description = "Software Development Engineer"
-    authorimage = "img/avatar.png"
+    title = "Software Engineer"
+    description = "Software Engineer"
+    authorimage = "/img/avatar.png"
     dateformat = "Jan 2, 2006"
+    keywords = "blog,developer,engineering, go, golang, flutter, devOps, frontend, backend"
+    info = "WEB AND APPS ENGINEER"
+    fixedbarContent = "Do you want to know me more private?→"
+    fixedbarContentAfter = "Thank You! Please share it if you like it→"
+    snsShare = true
+    enableTwitterShare = true
+    enableFacebookShare = true
+    itemscentered = true
+    langseparator = "|"
+
 
     # sidebar, copyright & license
     copyright = "Adeshina"
