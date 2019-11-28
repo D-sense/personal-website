@@ -5,6 +5,7 @@ link: https://uopeople.edu
 screenshot: logo_uopeople.png
 date: '2016-04-01'
 layout: 'portfolio'
+
 ---
 
 [University of The People](https://uopeople.edu). April 2016 - August 2018:

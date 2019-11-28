@@ -5,6 +5,7 @@ link: https://listbuy.ideraos.com/
 screenshot: ideraos.svg
 date: '2018-11-01'
 layout: 'portfolio'
+
 ---
 
 [IderaOS E-commerce & and Logistics](https://ideraos.com). November 24, 2018 — August 2019:
