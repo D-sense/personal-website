@@ -53,6 +53,7 @@ enableRobotsTXT = true
 
 ## Social Accounts
 [params.social]
+    medium = "@adeshinaHH"
     github = "d-sense"
     linkedin = "adesina-hammed-h-7bb52372"
     twitter = "adeshinaHH"

@@ -7,7 +7,7 @@ Hi, I am Adesina Hammed Hassan! I work with Payment Applications and Business Au
 
 I love writing and speaking about Go and Flutter, and organizing Go events (In fact, I am a co-host of Go Meetup in Nigeria).
 
-I am deeply in love with open source and working to get more involved, specifically Go, Docker, and Kubernetes. One of my dreams is becoming a Google Developer Expert for Go. Right :)
+I am deeply in love with open source (and working to get more involved), specifically Go, Docker, and Kubernetes. One of my dreams is becoming a Google Developer Expert for Go. Right :)
 
 *[side-project] Currently I’m re-writing [ReportPools](https://reportspool.com) in Go and Vue.js; a database for reporting missing and found people and properties. For missing or found people, the service uses Computer Vision (CV) to identify if the picture that accominies the report exists in our database. If it does, it would connect the reporter with the existing report/post. For non-human, it uses text processing to conduct matching between the new report against existing reports in our database.
 
