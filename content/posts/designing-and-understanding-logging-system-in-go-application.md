@@ -4,7 +4,7 @@ linktitle: logging in Go
 title: "Designing A Basic Logging System in Go Application"
 categories: ["Go", "Golang"]
 tags: ["observability", "go", "golang", "logging", "backend"]
-date: 2020-01-14T16:10:20+01:00
+date: 2019-12-27
 weight: 10
 ---
 
