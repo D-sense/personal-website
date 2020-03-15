@@ -106,7 +106,7 @@ If you run through the examples above, we can confirm that the values of variabl
 Now, let's explore the other way Go function treats parameters; Pass-By-Reference.
 
 ### What Is Pass-By-Reference?
-Pass-By-Reference means that the memory address of the variable (a pointer to the memory location) is passed to the function. This means any modification within your function that is done on the passed variable  will automatically affect the original value of the variable. This is different from Pass-By-Value, where the value (not memory address) of a variable is passed on. These types (slice, map, pointer, function, and channel) are Passed-By-reference. Let us look at some examples below: 
+Pass-By-Reference means that the memory address of the variable (a pointer to the memory location) is passed to the function. This means any modification within your function that is done on the passed variable will automatically affect the original value of the variable. This is different from Pass-By-Value, where the value (not memory address) of a variable is passed on. Although Go does not support "reference variables" as opposed to languages like C++, conceptually, we can achieve a similar effect. These types (slice, map, pointer, function, and channel) are Passed-By-reference. Let us look at some examples below:
 ```
 # slice
 
