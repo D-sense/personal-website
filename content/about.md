@@ -21,8 +21,8 @@ Technology Stacks:
 * Programming Languages: Go, PHP, JavaScript(Vue.js), and Dart.
 * Database: MySQL, PostgreSQL, MariaDB, and Redis.
 * Infrastructure: AWS (EC2), GCP, Digital Ocean, and Laravel Forge, Docker, Kubernetes(basic), and Git.
-* Operating Syetm: Linux, MacOS, and Widnows.
-* Experience in Web and RESTful services, concurrency, distributed system and micro-services development. Clean, clear and well-tested code.
+* Operating System: Linux, MacOS, and Windows.
+* Experience in Web and RESTfull services, concurrency, distributed system and micro-services development. Clean, clear and well-tested code.
 
 
 -----------------------------------
@@ -32,9 +32,17 @@ Technology Stacks:
 Talks & Events:
 -
 
-* I co-host Go Meetup in nigeria (Lagos) on a monthly basis.
+* I organize Go Meetup in Lagos, Nigeria (@GolangNigeria) on a monthly basis.
+
+* Getting Started with Learning Go Programming Language
+February, 2020 — Getting Started with Learning Go Programming Language. At Go Meetup Nigeria. [Info](https://www.meetup.com/GolangNigeria/events/268265927/). [Slides](https://docs.google.com/presentation/d/1fxABjRUpel8_MJYNZn3m_oBRk6oiMP-qadGg6KkTKwA/edit?usp=sharing)
+
+* Designing A Basic Logging System in Go Application
+December, 2019 — Designing A Basic Logging System in Go Application. At Go Meetup Nigeria. [Info](https://www.meetup.com/GolangNigeria/events/267184204/). [Slides]( https://docs.google.com/presentation/d/1ZN1-OPuvMf2KQcHgXNYzkAVpmmngu8c1y8I3vSHNFT4/edit?usp=sharing)
+
 * ADVANTAGES OF ADOPTING GO AS YOUR MAIN STACK.
 October, 2019 — Advantages of Adopting Go as your main stack ( with focus on application vertical scaling). At Go Meetup Nigeria. [Info](https://www.meetup.com/GolangNigeria/events/265507431/).
+
 * RESTFUL API & LOCAL STORAGE CONSUMPTION IN FLUTTER.
 January, 2019 — RESTful API and Local Storage Consumption in Flutter. At Flutter Lagos Meetup. [Info](https://docs.google.com/presentation/d/1aNT9xlc8wNSlKa_y_Hj4s7SIU7dOFXFHH0X9P8afB14/edit#slide=id.gc6f9e470d_0_0).
 
