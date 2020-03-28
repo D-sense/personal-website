@@ -8,7 +8,7 @@ weight: 10
 
 ## Introduction
 
-Many programming languages support passing an argument by value and/or by reference. In this blog, we are going to learn how Go handles pass-by-value and pass-by-reference.
+Many programming languages support passing an argument by value and/or by reference. In this article, we're going to learn how Go's function handles passed arguments.
 
 ### What Is Pass-By-Value?
 In Go, when a parameter is passed to a function by value, it means the parameter is copied into another location of your memory, and when accessing or modifying the variable within your function, only the copy is accessed/modified and the original value is never modified. 
@@ -106,7 +106,40 @@ If you run through the examples above, we can confirm that the values of variabl
 Now, let's explore the other way Go function treats parameters; Pass-By-Reference.
 
 ### What Is Pass-By-Reference?
-Pass-By-Reference means that the memory address of the variable (a pointer to the memory location) is passed to the function. This means any modification within your function that is done on the passed variable will automatically affect the original value of the variable. This is different from Pass-By-Value, where the value (not memory address) of a variable is passed on. Although Go does not support "reference variables" as opposed to languages like C++, conceptually, we can achieve a similar effect. These types (slice, map, pointer, function, and channel) are Passed-By-reference. Let us look at some examples below:
+There is an understanding/debate of whether Go composite types are passed to function by reference. To be specific, Go does not support "Pass-By-Reference" semantic in any way. The reason is simple; Go does not support a reference variable as you have in other programming languages like C++. Conceptually, in a case of Map, when you create a type of Map and then pass it to a function, should the function modify the argument, the effect will affect the original variable as well. Well, this may appear as if the Map variable is passed by reference, but that is not correct. When you create a variable of type Map using the "make()", under the hood, it calls on makemap() which returns *hmap (that is a pointer). So, passing the variable to a function is a Pass-By-Pointer, not a Pass-By-Reference. The same concept applies to Channel. Although, Slice is relatively different in how its data structure is (a struct with three types; pointer to the underlying array, length of the slice, and capacity for the slice). But, it is also treated as a Pass-by-Pointer.
+
+Before we move on to some examples of how Go function treats the Composite types (Slice, and Map), Channel, Pointer, and function, let us take a look at this snippet of code that confirms Go composite types are not Passed-By-Reference:
+
+```
+package main
+
+import "fmt"
+
+func myMap(v map[int]int) {
+        v = make(map[int]int) // make() declares and initializes v to 0
+}
+
+func myInt(v []int) {
+        v = make([]int) // make() declares and initializes v to 0
+}
+
+func main() {
+        var v map[int]int  //v is declared but NOT initialized, which means its value is nil
+        myMap(v)
+        fmt.Println(v == nil) // true
+		
+		    var i []int  // i is declared but NOT initialized, which means its value is nil
+        myInt(i)
+        fmt.Println(i == nil) // true
+}
+```
+
+Looking at the example above, we could tell that even after declaring a variable "V", then calling myF() on it in order to initialize it to 0. Eventually, when we test for its value after the call, it results in "true". This means myF() did not treat "v" as Pass-By-Reference (because Go does not support that semantic). The same result we would get if we try Slice and Channel.
+
+You can read more on this topic in this [GREAT Dave Cheney’s blog.](https://dave.cheney.net/2017/04/29/there-is-no-pass-by-reference-in-go)
+
+Below are the example of passing the Composite types and other types (asides from Primitive types discussed above) in Go:
+
 ```
 # slice
 
@@ -199,13 +232,12 @@ status := make(chan string)  // P.S: "status" has an empty value at the moment
 go modifyChannel(status)    
 fmt.Println("After function call: ", <- status) // INJECTING A NEW MESSAGE
 ```
-Running through the examples above, we can see the effect of passing a parameters to functions by reference. 
-In the "slice", example, we can confirm that the value of the variable "coffeeBox" was modified when passed to the function "modifySlice". The same case with "map", "pointer", "function", and "channel". 
-If you find yourself in need of modifying the value of a basic type (int, float, bool, etc), simply pass the variable'' memory address to the function (in other words, treat the parameter as a pointer). The "pointer" section exemplifies this scenario clearly. 
-
+Running through the examples above, we can see the effect of passing parameters to functions. In the slice, for example, we can confirm that the value of the variable coffeeBox was modified when passed to the function modifySlice. It's the same with map, pointer, function, and channel.
+If you find yourself in need of modifying the value of a basic type (int, float, bool, etc), simply pass the variable's memory address to the function (in other words, treat the parameter as a pointer). The pointer section clearly exemplifies this scenario.
 
 ## Summary:
-When arguments are passed by value, the function receives a copy of each argument; modifications to the copy do not affect the caller. On the other hand, if the argument contains some kind of reference, like a pointer, slice, map, function, or channel, then the caller may be affected by any modifications the function makes to variables indirectly referred to by the argument. 
+Go supports the Pass-By-Value sematic; when arguments are passed by value, the function receives a copy of each argument - modifications to the copy do not affect the caller. On the other hand, It does not support Pass-By-Reference. But, it does support Pass-by-Pointer which can be used to modify the underlying argument's value.
+
 In this short blog, we have explored the two ways of how Go treats parameters passed to its function. 
 It is very important to be aware of this concept so as to avoid false/wrong expectations. 
 Till the next blog, keep Go-ing :)
