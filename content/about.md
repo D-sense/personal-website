@@ -2,13 +2,13 @@
 title = "About me"
 +++
 
-Hi, I am Adesina Hammed Hassan! I work with Payment Applications and Business Automation Technology (IT), [Sterling Bank PLC](https://sterling.ng), Head Office Nigeria.
+Hi, I am Adesina Hammed Hassan! I work at The Linux Foundation as Software Engineer.
 
 I love writing and speaking about Go/Golang; (I am the organizer of Go/Golang meetups in Nigeria).
 
 I am deeply in love with open source (and working to get more involved), specifically Go, Docker, Kubernetes, and others. One of my dreams is becoming a Google Developer Expert for Go. Right :)
 
-<!-- *[side-project] Currently I’m re-writing [ReportPools](https://reportspool.com) in Go and Vue.js; a database for reporting missing and found people and properties. For missing or found people, the service uses Computer Vision (CV) to identify if the picture that accominies the report exists in our database. If it does, it would connect the reporter with the existing report/post. For non-human, it uses text processing to conduct matching between the new report against existing reports in our database. -->
+I enjoy building solutions. Currently, I’m co-founding [GetTreasure (PolicyGenius for Africa)](https://gettreasure.com).
 
 
 -----------------------------------
@@ -18,10 +18,11 @@ Technology Stacks:
 -
 
 * Programming Languages: Go, JavaScript(Vue.js), PHP, and Dart.
-* Database: MySQL, PostgreSQL, MariaDB, and Redis.
-* Infrastructure: AWS, GCP, Digital Ocean, and Laravel Forge, Docker, and Git.
+* Database: MySQL, PostgreSQL, MariaDB, Redis, and SQLITE.
+* Cloud Infrastructure: AWS, GCP, Digital Ocean, Docker, and Kubernetes.
 * Operating System: Linux, MacOS, and Windows.
-* Experience in Web and RESTfull services, concurrency, distributed system and micro-services development. Clean, clear and well-tested code.
+* Other : Git (GitHub), gRPC, GraphQL, WebSocket, RabbitMQ. 
+* Very good experience writing for Web and RESTfull services, concurrency, distributed system and micro-services. Clean, clear and well-tested code.
 
 
 -----------------------------------
