@@ -2,11 +2,13 @@
 title = "About me"
 +++
 
-Hi, I am Adesina Hammed Hassan! I work at The Linux Foundation as Software Engineer.
+Hi, I am Adesina Hammed Hassan. I work at The Linux Foundation as Software Engineer.
 
-I love writing and speaking about Go/Golang; (I am the organizer of Go/Golang meetups in Nigeria).
+I enjoy technical writing and speaking about Go/Golang; (I am the organizer of Go/Golang meetups in Nigeria).
 
-I am deeply in love with open source (and working to get more involved), specifically Go, Docker, Kubernetes, and others. One of my dreams is becoming a Google Developer Expert for Go. Right :)
+In my professional journey, I have honed my skills in designing and building robust software applications, employing both microservice and monolithic architectures. 
+I take pride in my ability to create modular and resilient solutions. 
+Furthermore, it has always been a cherished aspiration of mine to achieve the status of a Google Developer Expert in Go.
 
 I enjoy building solutions. Currently, I’m co-founding [GetTreasure (PolicyGenius for Africa)](https://gettreasure.com).
 
@@ -16,7 +18,6 @@ I enjoy building solutions. Currently, I’m co-founding [GetTreasure (PolicyGen
 
 Technology Stacks:
 -
-
 * Programming Languages: Go, JavaScript(Vue.js), PHP, and Dart.
 * Database: MySQL, PostgreSQL, MariaDB, Redis, and SQLITE.
 * Cloud Infrastructure: AWS, GCP, Digital Ocean, Docker, and Kubernetes.
