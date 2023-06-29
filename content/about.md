@@ -18,12 +18,12 @@ I enjoy building solutions. Currently, I’m co-founding [GetTreasure (PolicyGen
 
 Technology Stacks:
 -
-* Programming Languages: Go, JavaScript(Vue.js), PHP, and Dart.
-* Database: MySQL, PostgreSQL, MariaDB, Redis, and SQLITE.
-* Cloud Infrastructure: AWS, GCP, Digital Ocean, Docker, and Kubernetes.
+* Programming Languages: Go, JavaScript (Nuxt.js and Next.js), PHP, and Dart (Flutter).
+* Database: MySQL, PostgreSQL, DynamoDB, Redis, and SQLITE.
+* Cloud Infrastructure: AWS, Digital Ocean, Docker, Kubernetes, and Terraform.
 * Operating System: Linux, MacOS, and Windows.
 * Other : Git (GitHub), gRPC, GraphQL, WebSocket, RabbitMQ. 
-* Very good experience writing for Web and RESTfull services, concurrency, distributed system and micro-services. Clean, clear and well-tested code.
+* Very good experience writing for Web and REST API, concurrency, distributed system, clean and well-tested code.
 
 
 -----------------------------------

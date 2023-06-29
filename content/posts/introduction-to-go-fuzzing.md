@@ -219,10 +219,11 @@ runes[i] = unicode.ToUpper(rune(alphabet[newIndex]))
 It is quite disappointing that our test cannot detect such an edge case. This further proves the say that you can only find bugs you can think of. We need a tool that would make this edge cases detectable before they make it to our development/staging or production environment. 
 The good news is that we can implement another test technique in Go namely, Fuzz testing.
 Fuzz testing, also known as fuzzing, is a software testing technique that involves providing random or invalid input to a program in order to discover vulnerabilities, crashes, or unexpected behaviors. 
-While fuzz testing is a general concept that can be applied to any programming language, Go, or Golang, has gained popularity as a language of choice for implementing fuzz testing tools due to its simplicity, performance, and built-in support for concurrency (below image by Percy Bolmér. 
-Gopher by Takuya Ueda, Original Go Gopher by Renée French (CC BY 3.0)).
+While fuzz testing is a general concept that can be applied to any programming language, Go, or Golang, has gained popularity as a language of choice for implementing fuzz testing tools due to its simplicity, performance, and built-in support for concurrency.
 
 <img src="/img/fuzz-testing-go.png" />
+
+Percy Bolmér. Gopher by Takuya Ueda, Original Go Gopher by Renée French (CC BY 3.0)).
 
 #### Introduction of go-fuzz (Release in 2014):
 - go-fuzz was released in 2014.
