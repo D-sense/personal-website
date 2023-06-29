@@ -1,6 +1,6 @@
 ---
 author: "Adeshina Hassan"
-date: 2023-09-01
+date: 2023-01-11
 linktitle: Introduction to Fuzzing in Go
 title: Introduction to Fuzzing in Go
 categories: ["Go", "Golang", "Test", "Fuzz", "Security"]
@@ -11,8 +11,7 @@ weight: 10
 ## Introduction
 Everytime we get on the system to fix a bug in a feature, refactor a feature, or add a new feature, we are probably introducing bugs.
 As a result, the system may fail at handling the new additions correctly.
-So, it is safe to say: you can only find bugs you can think of.
-A quick example is when you attempt to dereference a nil pointer! Boom!!! This happens a lot.
+So, it is safe to say: you can only find bugs you can think of. A quick example is when you attempt to dereference a nil pointer! Boom!!! This happens a lot.
 
 ```
 # A problem:

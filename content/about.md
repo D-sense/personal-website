@@ -31,22 +31,41 @@ Technology Stacks:
 
 
 Talks & Events:
--
 
-* I organize Go meetups in Lagos, Nigeria (@GolangNigeria) on a monthly basis.
+* I speak and organize Go meetups in Lagos, Nigeria (Twitter handle: @GolangNigeria) on a monthly basis.
 
-* Getting Started with Learning Go Programming Language
+* Gophers Lagos Meetup: 
+May 20, 2023 — Go: Fuzz-Testing & Concurrency. [Info]( https://www.meetup.com/golangnigeria/events/293579848/).
+
+* Gophers Lagos Meetup
+January 21, 2023 — What is new in Go 1.20. [Info](https://www.meetup.com/golangnigeria/events/291056777/).
+
+* Gophers Nigeria Meetup: Go: A Splendid 2022
+December 3, 2022 — [I hosted and facilitated this event]. [Info](https://www.meetup.com/golangnigeria/events/290017512/).
+
+* Gophers Nigeria Meetup: It's Go Birthday
+November 13, 2021 — [I hosted and facilitated this event]. [Info](https://www.meetup.com/golangnigeria/events/281969887/).
+
+* Gophers Lagos Meetup
+January 9, 2021 — [I hosted and facilitated this event]. [Info](https://www.meetup.com/golangnigeria/events/274776873/).
+
+* Gophers Lagos Meetup
+September 19, 2020 — Dynamic Programming in Go at Go Meetup Nigeria. [Info](https://www.meetup.com/golangnigeria/events/273304231/).
+
+* Gophers Lagos Meetup
+August 1, 2020 — [I hosted and facilitated this event]. [Info](https://www.meetup.com/golangnigeria/events/272231123/). 
+
+* Gophers Lagos Meetup
 February, 2020 — Getting Started with Learning Go Programming Language. At Go Meetup Nigeria. [Info](https://www.meetup.com/GolangNigeria/events/268265927/). [Slides](https://docs.google.com/presentation/d/1fxABjRUpel8_MJYNZn3m_oBRk6oiMP-qadGg6KkTKwA/edit?usp=sharing)
 
-* Designing A Basic Logging System in Go Application
+* Gophers Lagos Meetup
 December, 2019 — Designing A Basic Logging System in Go Application. At Go Meetup Nigeria. [Info](https://www.meetup.com/GolangNigeria/events/267184204/). [Slides]( https://docs.google.com/presentation/d/1ZN1-OPuvMf2KQcHgXNYzkAVpmmngu8c1y8I3vSHNFT4/edit?usp=sharing)
 
-* ADVANTAGES OF ADOPTING GO AS YOUR MAIN STACK.
+* Gophers Lagos Meetup.
 October, 2019 — Advantages of Adopting Go as your main stack ( with focus on application vertical scaling). At Go Meetup Nigeria. [Info](https://www.meetup.com/GolangNigeria/events/265507431/).
 
-* RESTFUL API & LOCAL STORAGE CONSUMPTION IN FLUTTER.
+* Flutter Lagos Meetup at ccHub
 January, 2019 — RESTful API and Local Storage Consumption in Flutter. At Flutter Lagos Meetup. [Info](https://docs.google.com/presentation/d/1aNT9xlc8wNSlKa_y_Hj4s7SIU7dOFXFHH0X9P8afB14/edit#slide=id.gc6f9e470d_0_0).
-
 
 -----------------------------------
 -----------------------------------
