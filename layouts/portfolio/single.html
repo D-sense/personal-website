@@ -1,0 +1,54 @@
+{{ define "main" }}
+
+<section class="section narrow">
+    
+    <!-- Back to Portfolio Navigation -->
+    <div style="margin-top: 3rem; margin-bottom: 2rem;">
+        <a href="/portfolio/" style="display: inline-flex; align-items: center; color: #73737D; text-decoration: none; font-weight: 500; padding: 0.75rem 1.25rem; border: 1px solid #e1e5e9; border-radius: 6px; transition: all 0.2s; font-size: 0.9rem;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.borderColor='#73737D'; this.style.color='#333';" onmouseout="this.style.backgroundColor='transparent'; this.style.borderColor='#e1e5e9'; this.style.color='#73737D';">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;">
+                <path d="m15 18-6-6 6-6"/>
+            </svg>
+            Back to Portfolio
+        </a>
+    </div>
+
+    <div class="article-hero">
+        <header class="article-header">
+            <h1 class="article-hero-heading">{{ .Title }}</h1>
+            <div class="article-hero-subtitle">
+                <div class="article-meta">
+                    {{ .Date.Format "January 2006" }}
+                    {{ if .Params.link }}
+                        • <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Params.link }}</a>
+                    {{ end }}
+                </div>
+            </div>
+        </header>
+        
+        {{ if .Params.screenshot }}
+        <div class="article-hero-image" id="ArticleImage__Hero" style="position: relative;">
+            <img src="{{ .Params.screenshot }}" alt="{{ .Title }}">
+        </div>
+        {{ end }}
+    </div>
+
+    <article class="post-content">
+        {{ if .Params.description }}
+        <div class="portfolio-description-box">
+            <p><strong>{{ .Params.description }}</strong></p>
+        </div>
+        {{ end }}
+        
+        {{ .Content }}
+        
+        {{ if .Params.link }}
+        <div class="portfolio-link-section">
+            <a href="{{ .Params.link }}" target="_blank" rel="noopener" class="portfolio-external-link">
+                Visit {{ .Title }} →
+            </a>
+        </div>
+        {{ end }}
+    </article>
+</section>
+
+{{ end }}

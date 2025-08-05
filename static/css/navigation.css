@@ -1,0 +1,119 @@
+/* Main Navigation Styles */
+.main-navigation {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0;
+  list-style: none !important;
+}
+
+.nav-item::before {
+  display: none !important;
+  content: none !important;
+}
+
+.nav-item::after {
+  display: none !important;
+  content: none !important;
+}
+
+.nav-link {
+  color: var(--grey);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  transition: all 0.2s ease;
+  position: relative;
+  display: block;
+  white-space: nowrap;
+}
+
+.nav-link::before {
+  display: none !important;
+  content: none !important;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-navigation {
+    display: none;
+  }
+  
+  .nav-container {
+    justify-content: space-between;
+  }
+}
+
+/* Mobile Navigation Toggle (for future enhancement) */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+}
+
+/* Ensure nav container has proper layout */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* Enhanced responsive design */
+@media screen and (max-width: 768px) {
+  .nav-list {
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}

@@ -1,19 +1,21 @@
 ---
-author: "Adeshina Hassan"
 date: 2023-01-11
 linktitle: Introduction to Fuzzing in Go
 title: Introduction to Fuzzing in Go
 categories: ["Go", "Golang", "Test", "Fuzz", "Security"]
 tags: ["go", "golang", "Fuzz", "Security"]
 weight: 10
+hero: /img/posts/fuzz-testing-go.png
+hero_credit: "Photo by Gopher Community"
+hero_source: "https://golang.org"
 ---
 
 ## Introduction
-Everytime we get on the system to fix a bug in a feature, refactor a feature, or add a new feature, we are probably introducing bugs.
+Every time we get on the system to fix a bug in a feature, refactor a feature, or add a new feature, we are probably introducing bugs.
 As a result, the system may fail at handling the new additions correctly.
-So, it is safe to say: you can only find bugs you can think of. A quick example is when you attempt to dereference a nil pointer! Boom!!! This happens a lot.
+So, it is safe to say: you can only find bugs you can anticipate. A quick example is when you attempt to dereference a nil pointer! Boom!!! This happens a lot.
 
-```
+```go
 # A problem:
 
 func main2() {
@@ -37,16 +39,16 @@ func main2() {
 ```
 
 In an ideal situation, you would want to test your code right after/before completing the implementation, right?
-This code will run perfectly well as long as we have at least, 2 student profile records. However, the moment we start having one student record, this will definitely break! 
+This code will run perfectly well as long as we have at least 2 student profile records. However, the moment we start having one student record, this will definitely break! 
 
 #### Possible Solution
-A possible solution would be to check the length of the slice before accessing any of its item to avoid accessing an item that doesn't exist, thus running into Out of bond index.
-Although for this simple code snippet we could enforce the check and be fine, right? However, we could easily However, there is no way to enforce this check, in fact, you cannot guarantee a check anywhere the list is used.
+A possible solution would be to check the length of the slice before accessing any of its items to avoid accessing an item that doesn't exist, thus running into an out of bounds index.
+Although for this simple code snippet we could enforce the check and be fine, right? However, there is no way to enforce this check everywhere, and in fact, you cannot guarantee a check anywhere the list is used.
 
 #### Efficient Solution
-First, let's look at a more complex problem. Below is caesar package that provides support for encoding and decoding texts using Caesar Cipher principle:
+First, let's look at a more complex problem. Below is a caesar package that provides support for encoding and decoding texts using the Caesar Cipher principle:
 
-```
+```go
 # caesar.go :
 
 // Package caesar provides support for encoding and decoding using Caesar Cipher principle.
@@ -127,7 +129,7 @@ func caesarCipher(str string, key int) string {
 
 Let's create a `main.go` file:
 
-```
+```go
 package main
 
 import (
@@ -175,7 +177,7 @@ Running the code would result:
 - ``decoded text:  Let's carve him as a dish fit for the gods.``
 
 Let's write test for the caesar's Encrypter function:
-```
+```go
 func Test_Encrypter(t *testing.T) {
 	t.Log("Encrypt text")
 	{
@@ -216,22 +218,22 @@ Above error is from this line of the caesarCipher function:
 runes[i] = unicode.ToUpper(rune(alphabet[newIndex]))
 ``
 
-It is quite disappointing that our test cannot detect such an edge case. This further proves the say that you can only find bugs you can think of. We need a tool that would make this edge cases detectable before they make it to our development/staging or production environment. 
+It is quite disappointing that our test cannot detect such an edge case. This further proves the saying that you can only find bugs you can anticipate. We need a tool that would make these edge cases detectable before they make it to our development/staging or production environment. 
 The good news is that we can implement another test technique in Go namely, Fuzz testing.
 Fuzz testing, also known as fuzzing, is a software testing technique that involves providing random or invalid input to a program in order to discover vulnerabilities, crashes, or unexpected behaviors. 
 While fuzz testing is a general concept that can be applied to any programming language, Go, or Golang, has gained popularity as a language of choice for implementing fuzz testing tools due to its simplicity, performance, and built-in support for concurrency.
 
-<img src="/img/fuzz-testing-go.png" />
+<img src="/img/posts/fuzz-testing-go.png" />
 
 Percy Bolmér. Gopher by Takuya Ueda, Original Go Gopher by Renée French (CC BY 3.0)).
 
-#### Introduction of go-fuzz (Release in 2014):
+#### Introduction of go-fuzz (Released in 2014):
 - go-fuzz was released in 2014.
 - Created by Dmitry Vyukov, a software engineer at Google.
 - Dmitry Vyukov also developed the original coverage-guided fuzzing technique known as "American Fuzzy Lop" (AFL).
 
 #### Features and Integration of go-fuzz:
-- go-fuzz was added to Go programing language in version 1.18.
+- go-fuzz was added to the Go programming language in version 1.18.
 - go-fuzz leverages the reflection capabilities of Go.
 - Automatically generates and executes a large number of test cases with different inputs.
 - Uses code coverage information to guide the generation of new inputs.
@@ -239,7 +241,7 @@ Percy Bolmér. Gopher by Takuya Ueda, Original Go Gopher by Renée French (CC BY
 
 Now that we have learned about the history of Fuzz testing in Go, let's write some fuzz test:
 
-```
+```go
 func Fuzz_Encrypter(f *testing.F) {
 	f.Fuzz(func(t *testing.T, text string, key int) {
 		data := caesar.NewEncoding{
@@ -256,7 +258,7 @@ func Fuzz_Encrypter(f *testing.F) {
 }
 ```
 
-Running above test would result to:
+Running the above test would result in:
 
 ``
 panic: runtime error: index out of range [-18]
@@ -266,11 +268,11 @@ Fuzz testing technique involves providing random or invalid input to the `Encryp
 The solution to this panic behavior would be to ensure that `Key` field's value is greater than 0. 
 This can be achieved by adding validation to the field, like so: 
 
-```
+```go
 type NewEncoding struct {
 	Text string `json:"text" validate:"required"`
-	Key  int    `json:"key"`  // Old defintiion
-	Key  int    `json:"key" validate:"gte=1"`  // New defintiion
+	Key  int    `json:"key"`  // Old definition
+	Key  int    `json:"key" validate:"gte=1"`  // New definition
 }
 ```
 Let's make the change and run the test again. The test should run successfully now. 

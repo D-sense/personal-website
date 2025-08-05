@@ -1,45 +1,74 @@
-{{ define "header" }}
-  {{ partial "header.html" . }}
-{{ end }}
+{{ define "main" }}
+<section class="section narrow">
+    <section>
+        <section class="section narrow">
+            <div class="author-hero">
+                <div class="author-hero-image">
+                    <img src="/img/avatar.jpeg" />
+                </div>
+                <h1 class="author-heading">{{ .Title }}</h1>
+                <p class="author-subheading">{{ .Content | plainify }}</p>
+                <div class="author-social">
+                    {{ with site.Params.Social }}
+                    <div class="social-icon-outer authors-sio">
+                        <div class="social-icon-container">
+                            {{ range $social, $url := . }}
+                                {{ $path := print "icons/social/" $social }}
+                                <a href="{{ $url }}">{{ partial $path $ }}</a>
+                                <span class="hidden">{{ $url }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </section>
 
-{{ define "content" }}
-  <div class="post-list">
-    {{ $no_portfolio:= (where .Site.RegularPages "Type" ">" "portfolio") }}
-    {{ $posts:= .Paginate (where $no_portfolio "Title" "<>" "About") }}
-    {{ range $posts.Pages }}
-      {{ if .Draft }}
-        {{ .Scratch.Set "draftPage" true }}
-      {{ else }}
-        {{ .Scratch.Set "draftPage" false }}
-      {{ end }}
-      <div class="post-list__item">
-        <span class="item__title--big">
-          <a href="{{ .RelPermalink }}" {{if .Scratch.Get "draftPage" }}class="draft"{{end}}>{{ .Title }}</a>
-        </span>
-        <span class="item__date">
-          {{ .Date.Format (.Site.Params.dateformat | default "Jan 02, 2006") }}
-        </span>
-        <span {{if .Scratch.Get "draftPage" }}class="draft"{{end}}>
-        {{ if .Description }}
-        {{ .Description }}
-        {{ else }}
-        {{ .Summary }}
-        {{ end }}
-        </span>
-        {{ if .Truncated }}
-          ... <a class="read-more-symbol" href="{{ .RelPermalink }}">➦</a>
-        {{ end }}
-        </div>
-        {{ .Scratch.Delete "draftPage" }}
-     {{ end }}
-  </div>
-  {{ partial "pagination.html" . }}
-{{ end }}
+        <section class="section nartrow author-alc-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; padding: 0 1rem;">
+                <h2 style="font-size: 1.8rem; font-weight: 600; margin: 0; color: #1a1a1a;">Latest Blog Posts</h2>
+                                            <a href="/posts/" style="color: #73737D; text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border: 1px solid #e1e5e9; border-radius: 6px; transition: all 0.2s; font-size: 0.9rem;" onmouseover="this.style.backgroundColor='#f8f9fa'; this.style.borderColor='#73737D';" onmouseout="this.style.backgroundColor='transparent'; this.style.borderColor='#e1e5e9';">
+                                View All Posts →
+                            </a>
+            </div>
+            <div id="articlesList" class="articles-list-container show-details author-alc">
+                                            {{ $posts := where site.RegularPages "Type" "posts" }}
+                {{ $paginator := .Paginate $posts }}
+                <div class="post-row-alt">
+                    {{ $scratch := newScratch }}
+                    {{ $scratch.Set "numPages" (len $paginator.Pages) }}
+                    {{ range $index, $article := $paginator.Pages }}
+                        <a href="{{ .RelPermalink }}" class="article-link">
+                            <div class="article-data-outer">
+                                <div class="image-container">
+                                    <img src="{{ .Params.hero }}" class="article-image" /> 
+                                </div>
+                                <div class="article-data">
+                                    <h2 class="article-title">
+                                        {{ .Title }}
+                                    </h2>
+                                    <p class="article-excerpt">
+                                        {{ .Summary | truncate 150 | plainify }}
+                                    </p>
+                                    <div class="article-metadata">
+                                        {{ .Date.Format "January 2, 2006" }}{{ with .ReadingTime }} • {{ . }} min read{{ end }}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        {{ if eq ($scratch.Get "numPages") (add $index 1) }}
+                            <a href="{{ .RelPermalink }}" style="opacity: 0;" class="article-link">
+                            </a>
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        </section>
+        {{ partial "paginator/paginator.html" . }}
 
-{{ define "footer" }}
-  {{ if .Site.GoogleAnalytics }}
-    <!-- Google Analytics -->
-    {{ template "_internal/google_analytics_async.html" . }}
-  {{ end }}
-  {{ partial "footer/font-awesome-js.html" . }}
+        {{ $script := resources.Get "js/toggleBorder.js" }}
+        <script src="{{ $script.RelPermalink }}"></script>
+    </section>
+    <div class="authors-gradient"></div>
+</section>
 {{ end }}

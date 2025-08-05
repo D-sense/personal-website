@@ -1,16 +1,16 @@
 +++
 title = "About me"
+avatar = "/img/avatar.jpeg"
+hero = "/img/avatar.jpeg"
 +++
 
-Hi, I am Adesina Hammed Hassan. I work at The Linux Foundation as Software Engineer.
+Hi, I am Adesina Hammed Hassan. I'm a Senior Software Engineer (Go/Golang) with 7+ years of experience delivering scalable, high-performance cloud-native systems for fintech, e-commerce, and open-source platforms. Currently based in Birmingham & London, England, I work at The Linux Foundation in California, where I design and develop core tooling that powers LFX services and supports thousands of users.
 
-I enjoy technical writing and speaking about Go/Golang; (I am the organizer of Go/Golang meetups in Nigeria).
+Throughout my professional journey, I have led backend teams, optimized system performance achieving measurable business outcomes like reducing search latency by 40% and improving system reliability to 99.9% uptime. I'm passionate about distributed system design, cloud infrastructure, and translating technology into business value.
 
-In my professional journey, I have honed my skills in designing and building robust software applications, employing both microservice and monolithic architectures. 
-I take pride in my ability to create modular and resilient solutions. 
-Furthermore, it has always been a cherished aspiration of mine to achieve the status of a Google Developer Expert in Go.
+Beyond my day job, I'm deeply involved in the Go community as the organizer of Lagos Gophers Community, which I've grown to become the largest Go community in Africa with over 2000+ members. I enjoy technical writing, speaking about Go/Golang, and mentoring engineers to help them grow in their careers.
 
-I enjoy building solutions. Currently, I’m co-founding [GetTreasure (PolicyGenius for Africa)](https://gettreasure.com).
+I take pride in building robust, modular solutions that solve real-world problems, whether it's processing 200M+ product feeds for major e-commerce affiliates or developing tools that increase user engagement by 20%.
 
 
 -----------------------------------
@@ -18,12 +18,13 @@ I enjoy building solutions. Currently, I’m co-founding [GetTreasure (PolicyGen
 
 Technology Stacks:
 -
-* Programming Languages: Go, JavaScript (Nuxt.js and Next.js), PHP, and Dart (Flutter).
-* Database: MySQL, PostgreSQL, DynamoDB, Redis, and SQLITE.
-* Cloud Infrastructure: AWS, Digital Ocean, Docker, Kubernetes, and Terraform.
-* Operating System: Linux, MacOS, and Windows.
-* Other : Git (GitHub), gRPC, GraphQL, WebSocket, RabbitMQ. 
-* Very good experience writing for Web and REST API, concurrency, distributed system, clean and well-tested code.
+* **Programming Languages:** Go/Golang, Zig, JavaScript (React, Next.js), PHP
+* **Cloud & Infrastructure:** AWS (Lambda, ELB, ECS, Fargate, S3, EC2, SQS, SNS, CloudWatch, IAM, Secret Manager), DigitalOcean, Docker, Kubernetes
+* **Databases:** DynamoDB, PostgreSQL, MySQL, Redis, SQLite
+* **Messaging & Queuing:** RabbitMQ, SQS, SNS
+* **DevOps & Tools:** Terraform, Git, Observability (OTEL, Zipkin)
+* **API Design:** REST, gRPC, CLI
+* **Architecture & Practices:** Microservices, Monolithic, System Design, Logging, Metrics, Tracing, Concurrency, Distributed Systems
 
 
 -----------------------------------
@@ -31,7 +32,7 @@ Technology Stacks:
 
 
 Talks & Events:
-
+-
 * I speak and organize Go meetups in Lagos, Nigeria (Twitter handle: @GolangNigeria) on a monthly basis.
 
 * Gophers Lagos Meetup: 
@@ -75,9 +76,9 @@ Education:
 -
 
 * University of The People, Pasadena, USA — Bachelor’s degree in Computer Science, (April 2011 - April 2016).
-<!-- * Al-Azhar University, Cairo, Egypt — Bachelor's degree in Arabic Literature.  -->
-<!-- (May 2017 - May 2013). -->
+* Al-Azhar University, Cairo, Egypt — Bachelor's degree in Arabic Literature. 
+(May 2017 - May 2013).
 * (National Institute of Telecommunication, Cairo, Egypt — GMDSS Certificate 
-<!-- (October 2007 - October 2009). -->
+(October 2007 - October 2009).
 * Heliopolis Secondary Institute, Cairo Egypt — Secondary School Certificate, 
-<!-- (2003 - 2005). -->
+(2003 - 2005).
