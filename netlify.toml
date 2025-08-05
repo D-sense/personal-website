@@ -3,25 +3,25 @@ publish = "public"
 command = "hugo --minify"
 
 [build.environment]
-HUGO_VERSION = "0.119.0"
+HUGO_VERSION = "0.148.2"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 NODE_VERSION = "18"
 NPM_FLAGS = "--production"
 
 [context.production.environment]
-HUGO_VERSION = "0.119.0"
+HUGO_VERSION = "0.148.2"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
 NODE_VERSION = "18"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.119.0"
+HUGO_VERSION = "0.148.2"
 HUGO_ENV = "production"
 NODE_VERSION = "18"
 
 [context.branch-deploy.environment]
-HUGO_VERSION = "0.119.0"
+HUGO_VERSION = "0.148.2"
 HUGO_ENV = "production"
 NODE_VERSION = "18"
 
