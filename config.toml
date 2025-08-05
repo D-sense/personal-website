@@ -12,7 +12,10 @@ category = "categories"
 
 ## Hugo Built-in Features
 # disqusShortname = "your-disqus-shortname"
-# googleAnalytics = "your-google-analytics-id"
+# Modern Hugo GA4 configuration
+[services]
+  [services.googleAnalytics]
+    id = "G-QCEQG3F7ZG"  # Replace with your GA4 Measurement ID
 enableRobotsTXT = true
 pygmentsStyle = "github"
 pygmentsCodeFences = true
@@ -72,9 +75,9 @@ ignoreLogs = ['warning-goldmark-raw-html']
     
     # please choose either GraphComment or Disqus or Utterances
     #GraphCommentId = "..."
-    #UtterancesRepo = "..." # https://utteranc.es/
-    #UtterancesIssueTerm = "..." # pathname, url, title, og:title
-    #UtterancesTheme = "..." # github-light or github-dark
+    UtterancesRepo = "d-sense/personal-website" # https://utteranc.es/
+    UtterancesIssueTerm = "pathname" # pathname, url, title, og:title
+    UtterancesTheme = "github-light" # github-light or github-dark
 
     # Table of contents
     #toc = none, "hugo", or "tocbot"

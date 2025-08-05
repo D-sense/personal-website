@@ -1,0 +1,14 @@
+{{ if .Site.Params.UtterancesRepo }}
+<section class="section narrow" style="margin-top: 3rem;">
+    <div class="comments-container">
+        <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--primary);">Comments</h3>
+        <script src="https://utteranc.es/client.js"
+                repo="{{ .Site.Params.UtterancesRepo }}"
+                issue-term="{{ .Site.Params.UtterancesIssueTerm | default "pathname" }}"
+                theme="{{ .Site.Params.UtterancesTheme | default "github-light" }}"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
+</section>
+{{ end }}
