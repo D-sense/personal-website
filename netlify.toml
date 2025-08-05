@@ -3,6 +3,14 @@ publish = "public"
 command = "hugo"
 
 [context.production.environment]
-HUGO_VERSION = "0.57.2"
+HUGO_VERSION = "0.121.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+NODE_VERSION = "18"
+
+[build.environment]
+HUGO_VERSION = "0.121.0"
+NODE_VERSION = "18"
+
+# Disable auto-plugin installation to prevent Node.js dependency issues
+[[plugins]]

@@ -4,7 +4,7 @@ hero:
   heading: "Welcome to my technical blog and portfolio"
   maxWidthPX: 652
 seo:
-  image: /img/portfolio/no.jpg
+  image: /img/avatar.jpeg
 ---
 
 **Software Engineer (Go/Golang)** with 7+ years of experience delivering scalable, high-performance cloud-native systems for fintech, e-commerce, and open-source platforms. 
