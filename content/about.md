@@ -1,7 +1,7 @@
 +++
 title = "About me"
-avatar = "/img/avatar.jpeg"
-hero = "/img/avatar.jpeg"
+avatar = "/img/portfolio/no.jpg"
+hero = "/img/portfolio/no.jpg"
 +++
 
 Hi, I am Adesina Hammed Hassan. I'm a Senior Software Engineer (Go/Golang) with 7+ years of experience delivering scalable, high-performance cloud-native systems for fintech, e-commerce, and open-source platforms. Currently based in Birmingham & London, England, I work at The Linux Foundation in California, where I design and develop core tooling that powers LFX services and supports thousands of users.
