@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo"
+command = "hugo --minify --baseURL https://adeshinahassan.com/"
 
 [context.production.environment]
 HUGO_VERSION = "0.121.0"

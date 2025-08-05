@@ -1,27 +1,30 @@
 {{ define "main" }}
 
-<section class="section narrow">
+<section class="section narrow" style="overflow: hidden;">
     <!-- Title Section -->
-    <div style="text-align: center; margin-bottom: 2rem; padding: 2rem 0;">
-        <h1 style="font-size: 2.5rem; font-weight: 700; margin: 0 0 2rem 0; color: #1A202C;">{{ .Title }}</h1>
+    <div style="text-align: center; width: 100%; min-height: 120px; display: flex; flex-direction: column; justify-content: center; margin-bottom: 0 !important;">
+        <h1 style="font-size: 2.5rem; font-weight: 700; margin: 0 !important; color: #1A202C; padding: 2rem 0 1rem 0;">{{ .Title }}</h1>
     </div>
     
-    <!-- Avatar Section -->
+    <!-- Avatar Section with Fixed Height -->
     {{ if .Params.avatar }}
-    <div style="text-align: center; margin: 2rem 0 3rem 0; padding: 1rem 0;">
-        <img src="{{ .Params.avatar | relURL }}" alt="{{ .Title }}" 
-             style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; 
-                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); display: block; margin: 0 auto;">
+    <div style="text-align: center; width: 100%; min-height: 280px; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 !important; padding: 0 !important;">
+        <img src="{{ .Params.avatar | absURL }}" alt="{{ .Title }}" 
+             style="width: 200px !important; height: 200px !important; border-radius: 50% !important; object-fit: cover !important; 
+                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important; display: block !important; margin: 2rem auto 3rem auto !important;
+                    position: static !important; float: none !important;">
     </div>
     {{ end }}
     
-    <!-- Clear any floats and ensure proper spacing -->
-    <div style="clear: both; height: 2rem;"></div>
+    <!-- Spacer -->
+    <div style="width: 100%; height: 40px; display: block; clear: both;"></div>
     
     <!-- Content Section -->
-    <article class="post-content" style="margin-top: 2rem; padding-top: 1rem; position: relative; z-index: 1;">
-        {{ .Content }}
-    </article>
+    <div style="width: 100%; min-height: 200px; display: block; clear: both; position: static;">
+        <article class="post-content" style="margin: 0 !important; padding: 2rem 0 0 0 !important; position: static !important; display: block !important; width: 100% !important;">
+            {{ .Content }}
+        </article>
+    </div>
 </section>
 
 {{ end }}
