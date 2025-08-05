@@ -1,19 +1,25 @@
 {{ define "main" }}
 
 <section class="section narrow">
-    <div class="article-hero" style="margin-bottom: 2rem !important; padding-bottom: 1rem !important;">
-        <header class="article-header" style="text-align: center; margin: 0 !important; padding: 0 !important;">
-            <h1 class="article-hero-heading" style="text-align: center; margin: 0 0 1.5rem 0 !important; padding: 0 !important;">{{ .Title }}</h1>
-            
-            {{ if .Params.avatar }}
-            <div class="about-avatar" style="margin-bottom: 1.5rem;">
-                <img src="{{ .Params.avatar | relURL }}" alt="{{ .Title }}" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);">
-            </div>
-            {{ end }}
-        </header>
+    <!-- Title Section -->
+    <div style="text-align: center; margin-bottom: 2rem; padding: 2rem 0;">
+        <h1 style="font-size: 2.5rem; font-weight: 700; margin: 0 0 2rem 0; color: #1A202C;">{{ .Title }}</h1>
     </div>
-
-    <article id="articleContent" class="post-content" style="margin-top: 1rem !important; padding-top: 1rem !important;">
+    
+    <!-- Avatar Section -->
+    {{ if .Params.avatar }}
+    <div style="text-align: center; margin: 2rem 0 3rem 0; padding: 1rem 0;">
+        <img src="{{ .Params.avatar | relURL }}" alt="{{ .Title }}" 
+             style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; 
+                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); display: block; margin: 0 auto;">
+    </div>
+    {{ end }}
+    
+    <!-- Clear any floats and ensure proper spacing -->
+    <div style="clear: both; height: 2rem;"></div>
+    
+    <!-- Content Section -->
+    <article class="post-content" style="margin-top: 2rem; padding-top: 1rem; position: relative; z-index: 1;">
         {{ .Content }}
     </article>
 </section>
