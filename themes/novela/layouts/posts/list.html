@@ -1,0 +1,122 @@
+{{ define "main" }}
+
+{{ partial "articles/hero.html" . }}
+
+<!-- Tag Filter System -->
+<section class="section narrow">
+    <div class="tag-filter-container">
+        <h3 class="tag-filter-title">Filter by tags:</h3>
+        <div class="tag-filter-buttons">
+            <button class="tag-filter-btn active" data-tag="all">All Posts</button>
+            {{ $allTags := slice }}
+            {{ range where site.RegularPages "Type" "posts" }}
+                {{ range .Params.tags }}
+                    {{ $allTags = $allTags | append . }}
+                {{ end }}
+            {{ end }}
+            {{ $uniqueTags := $allTags | uniq | sort }}
+            {{ range $uniqueTags }}
+                <button class="tag-filter-btn" data-tag="{{ . | urlize }}">{{ . }}</button>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "articles/articles.html" . }}
+
+<!-- Tag Filter JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.tag-filter-btn');
+    const articles = document.querySelectorAll('.article-link');
+    
+    // Create a map of articles to their tags for faster filtering
+    const articleTagMap = new Map();
+    
+    // Collect tags from each article
+    articles.forEach(article => {
+        const tagElements = article.querySelectorAll('.article-list-tag');
+        const tags = Array.from(tagElements).map(tag => tag.textContent.trim().toLowerCase());
+        articleTagMap.set(article, tags);
+        
+        // Debug: Log tags for each article (remove this in production)
+        console.log('Article tags:', tags);
+    });
+    
+    // Add click listeners to filter buttons
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const selectedTag = this.dataset.tag.toLowerCase();
+            console.log('Selected tag:', selectedTag); // Debug log
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            let visibleCount = 0;
+            
+            // Filter articles
+            articles.forEach(article => {
+                const articleTags = articleTagMap.get(article) || [];
+                const postRow = article.closest('.post-row');
+                
+                const shouldShow = selectedTag === 'all' || articleTags.includes(selectedTag);
+                
+                if (shouldShow) {
+                    article.style.display = '';
+                    visibleCount++;
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+            
+            // Handle post rows - show/hide entire rows based on visible articles
+            document.querySelectorAll('.post-row').forEach(row => {
+                const visibleArticlesInRow = row.querySelectorAll('.article-link:not([style*="display: none"])');
+                if (visibleArticlesInRow.length === 0) {
+                    row.style.display = 'none';
+                } else {
+                    row.style.display = '';
+                }
+            });
+            
+            // Show/hide "no results" message
+            let noResultsMsg = document.querySelector('.no-results-message');
+            if (visibleCount === 0) {
+                if (!noResultsMsg) {
+                    noResultsMsg = document.createElement('div');
+                    noResultsMsg.className = 'no-results-message';
+                    noResultsMsg.innerHTML = `
+                        <div class="no-results-content">
+                            <h3>No posts found</h3>
+                            <p>No posts match the selected tag "<strong>${this.textContent}</strong>". Try selecting a different tag.</p>
+                        </div>
+                    `;
+                    document.querySelector('#articlesList').appendChild(noResultsMsg);
+                }
+                noResultsMsg.style.display = 'block';
+            } else {
+                if (noResultsMsg) {
+                    noResultsMsg.style.display = 'none';
+                }
+            }
+            
+            console.log(`Showing ${visibleCount} articles for tag: ${selectedTag}`); // Debug log
+        });
+    });
+    
+    // Add count display to filter buttons
+    filterButtons.forEach(button => {
+        const tag = button.dataset.tag.toLowerCase();
+        if (tag !== 'all') {
+            let count = 0;
+            articleTagMap.forEach(tags => {
+                if (tags.includes(tag)) count++;
+            });
+            button.innerHTML = `${button.textContent} <span class="tag-count">(${count})</span>`;
+        }
+    });
+});
+</script>
+
+{{ end }}
