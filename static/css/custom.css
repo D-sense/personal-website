@@ -64,7 +64,7 @@ div.article-coauthors-icon-container {
 
 /* Pull content up to close gap with hero image */
 #articleContent {
-    margin-top: -35rem !important;
+    margin-top: 10rem !important;
     padding-top: 0 !important;
 }
 
