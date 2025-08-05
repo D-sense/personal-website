@@ -1,17 +1,19 @@
 ---
 title: "The Linux Foundation"
-description: "The Linux Foundation provides a neutral, trusted hub for developers and organizations to code, manage, and scale open technology projects and ecosystems."
+description: "Senior Software Engineer developing core tooling and internal systems for open-source platforms"
 link: https://www.linuxfoundation.org/
-screenshot: linux.jpeg
-date: '2020-12-01'
+screenshot: /img/portfolio/linux.jpeg
+date: '2024-12-01'
 layout: 'portfolio'
+category: 'corporate'
 ---
 
-[The Linux Foundation - Trusted hub for developers and organizations](https://www.linuxfoundation.org). December 2020 - Present:
+**Senior Software Engineer (Go/Golang)** - December 2024 – July 2025:
+- Designed and developed core tooling (Groupsio SDK, survey service, event processor), enabling feedback collection across LFX services and increasing user engagement by 20%
+- Maintained and extended internal tools, reducing third-party integration downtime by 30%
+- Collaborated with cross-functional teams to deliver 5+ new features and resolve critical bugs within 24 hours
 
-As a Software Engineer:
-- Collaborating on designing and developing REST API and internal tools that power LFX EasyCLA, LFX Individual Dashboard, and LFX Security: https://lfx.linuxfoundation.org
-
-- Developing scalable test suit which consists of mocking internal Github and DNSimple libraries used internally by the micro-services.
-
-- Managing and extending micro-services (roughly 56) with consistent collaboration with the QA and Business team.
+**Software Engineer (Go/Golang)** - December 2020 – October 2023:
+- Developed REST APIs and internal tools powering LFX EasyCLA, Individual Dashboard, and Security, supporting 10,000+ users
+- Built scalable test suites with mocked internal libraries, increasing test coverage by 35% and reducing bugs by 20%
+- Collaborated with QA and business teams to extend internal services, accelerating feature delivery by 15%

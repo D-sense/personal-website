@@ -3,16 +3,44 @@ baseurl = "https://adeshinahassan.com/"
 languageCode = "en"
 
 title = "Adeshina"
-theme = "hyde-hyde"
+theme = "novela"
+
+## Taxonomies
+[taxonomies]
+tag = "tags"
+category = "categories"
 
 ## Hugo Built-in Features
 # disqusShortname = "your-disqus-shortname"
 # googleAnalytics = "your-google-analytics-id"
 enableRobotsTXT = true
+pygmentsStyle = "github"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
 
 # summarylength = 30
+paginate = 6
 
-#paginate = 5
+## Markup Configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    style = "github"
+    tabWidth = 4
+
+## Ignore Logs for Raw HTML Warnings
+ignoreLogs = ['warning-goldmark-raw-html']
 
 ## Site Settings
 [params]
@@ -51,14 +79,12 @@ enableRobotsTXT = true
     # Table of contents
     #toc = none, "hugo", or "tocbot"
 
-## Social Accounts
+## Social Accounts for Novela Theme
 [params.social]
-    medium = "@adeshinaHH"
-    github = "d-sense"
-    linkedin = "adesina-hammed-h-7bb52372"
-    twitter = "adeshinaHH"
-    email = "delameh@icloud.com"
-    # gravatar = "your-email@example.com"
+    medium = "https://medium.com/@adeshinaHH"
+    github = "https://github.com/d-sense"
+    linkedin = "https://linkedin.com/in/adesina-hammed-h-7bb52372"
+    twitter = "https://twitter.com/adeshinaHH"
 
 ## Main Menu
 [[menu.main]]

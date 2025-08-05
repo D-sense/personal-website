@@ -1,0 +1,111 @@
+{{ define "main" }}
+
+<section class="section narrow">
+    <div class="article-hero">
+        <header class="article-header">
+            <h1 class="article-hero-heading">{{ .Title }}</h1>
+            <div class="article-hero-subtitle">
+                <p>Explore my professional journey and key projects across fintech, 
+                    open-source platforms, and e-commerce systems. Each experience has contributed to my 
+                    expertise in Go, cloud infrastructure, and scalable system design.
+                </p>
+            </div>
+        </header>
+        
+        <!-- Portfolio Tabs -->
+        <div class="portfolio-tabs">
+            <button class="tab-button active" data-category="corporate">Experience</button>
+            <button class="tab-button" data-category="tools">Products</button>
+        </div>
+    </div>
+
+    <article class="post-content">
+        {{ .Content }}
+        
+        <div class="portfolio-grid" id="portfolioGrid">
+            {{ range .Pages.ByDate.Reverse }}
+            <div class="portfolio-item" data-category="{{ .Params.category | default "other" }}">
+                <div class="portfolio-header">
+                    {{ if .Params.screenshot }}
+                                                    <div class="portfolio-logo">
+                                    <img src="{{ .Params.screenshot }}" alt="{{ .Title }}" />
+                                </div>
+                    {{ end }}
+                    <div class="portfolio-info">
+                        <h2 class="portfolio-title">
+                            {{ if .Params.link }}
+                                <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
+                            {{ else }}
+                                {{ .Title }}
+                            {{ end }}
+                        </h2>
+                        <p class="portfolio-description">{{ .Params.description }}</p>
+                        <div class="portfolio-date">{{ .Date.Format "January 2006" }}</div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-content">
+                    {{ .Content }}
+                </div>
+                
+                {{ if .Params.link }}
+                <div class="portfolio-link">
+                    <a href="{{ .Params.link }}" target="_blank" rel="noopener" class="portfolio-button">
+                        Visit Project →
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </article>
+</section>
+
+<!-- Portfolio Tabs JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    // Show corporate by default
+    portfolioItems.forEach(item => {
+        const itemCategory = item.dataset.category;
+        if (itemCategory === 'corporate') {
+            item.style.display = 'block';
+            item.style.opacity = '1';
+        } else if (itemCategory === 'hidden') {
+            item.style.display = 'none';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.dataset.category;
+            
+            // Update active tab
+            tabButtons.forEach(tab => tab.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter portfolio items
+            portfolioItems.forEach(item => {
+                const itemCategory = item.dataset.category;
+                
+                if (itemCategory === category) {
+                    item.style.display = 'block';
+                    // Add fade-in animation
+                    item.style.opacity = '0';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                    }, 50);
+                } else if (itemCategory !== 'hidden') {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+
+{{ end }}

@@ -1,16 +1,19 @@
 ---
-author: "Adeshina Hassan"
+
 date: 2019-09-01
 linktitle: Sending SMS in Golang
 title: Sending SMS in Golang to Nigeria Phone Numbers
 categories: ["Go", "Golang"]
 tags: ["sms", "go", "golang", "nigeria", "backend"]
 weight: 10
+hero: /img/posts/golang-cover.png
+hero_credit: "Photo by Gopher Community"
+hero_source: "https://golang.org"
 ---
 
 ## Introduction
 
-This tutorial will show you how to handle sending SMS in Go to Nigeria phone numbers with ease. To be specific, in the last two API services I programmed for a Nigerian client, part of the requirements is the ability to send SMS to customers with without attracting a noticeable cost. This means, to get a very cost rate for eash SMS sent, there has to be an integration with local SMS vendors. As a result, I created this [client package](https://github.com/D-sense/sms-nigeria-go) to implement this feature. Currently, the package supports two vendors, namely [Bulk SMS Nigeria](https://www.bulksmsnigeria.com/) and [SMS Clone](http://smsclone.com).
+This tutorial will show you how to handle sending SMS in Go to Nigeria phone numbers with ease. To be specific, in the last two API services I programmed for a Nigerian client, part of the requirements is the ability to send SMS to customers without attracting a noticeable cost. This means, to get a very cost-effective rate for each SMS sent, there has to be an integration with local SMS vendors. As a result, I created this [client package](https://github.com/D-sense/sms-nigeria-go) to implement this feature. Currently, the package supports two vendors, namely [Bulk SMS Nigeria](https://www.bulksmsnigeria.com/) and [SMS Clone](http://smsclone.com).
 
 ### Requirement
 
@@ -20,12 +23,12 @@ I assume that you are familiar with Go (basic knowledge of the language will do)
 
 We'll start with downloading and importing the package:
 
-```
+```go
 # download the package
 go get github.com/d-sense/sms-nigeria-go
 ```
 
-```
+```go
 # import the package in .go file
 "github.com/d-sense/sms-nigeria-go"
 ```
@@ -34,7 +37,7 @@ In the .go (this may be the main.go or any other file in which you want to add t
 
 ##### *Bulk SMS Nigeria vendor  --> [register and redeem your account here](https://www.bulksmsnigeria.com/)
 
-```
+```go
 #To send SMS:
 
 # declaring the notification service
@@ -57,7 +60,7 @@ fmt.Println(result)
 
 ##### *SMS Clone vendor  --> [register and redeem your account here](http://smsclone.com)
 
-```
+```go
 #To send SMS:
 
 # declare the notification service

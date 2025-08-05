@@ -1,9 +1,13 @@
 ---
 title: "Pass by Value and Reference in Go"
+
 categories: ["Go", "Golang"]
 date: 2020-03-01
 tags: ["go", "golang", "basic"]
 weight: 10
+hero: /img/posts/pass-by-value-reference.png
+hero_credit: "Photo by Cadaxo"
+hero_source: "https://www.cadaxo.com"
 ---
 
 ## Introduction
@@ -12,9 +16,9 @@ Many programming languages support passing an argument by value and/or by refere
 
 ### What Is Pass-By-Value?
 In Go, when a parameter is passed to a function by value, it means the parameter is copied into another location of your memory, and when accessing or modifying the variable within your function, only the copy is accessed/modified and the original value is never modified. 
-All primitive/basic types (int (all its variant), float (all its variant), boolean, string, array, and struct) in Go are passed by value. Passing by value is how your values are passed on to functions most of the time. Let us look at some examples below: 
+All primitive/basic types (int (all its variants), float (all its variants), boolean, string, array, and struct) in Go are passed by value. Passing by value is how your values are passed on to functions most of the time. Let us look at some examples below: 
 
-```
+```go
 # int
 
 func modifyInt(n int) int {
@@ -27,7 +31,7 @@ fmt.Println("Function call:", modifyInt(age))           // 35
 fmt.Println("After function call: ", age)               // 30
 ```
 
-```
+```go
 # float
 
 func modifyFloat(n float64) float64 {
@@ -40,7 +44,7 @@ fmt.Println("Function call:", modifyFloat(cash))        // 15.5
 fmt.Println("After function call: ", cash)              // 10.5
 ```
 
-```
+```go
 # bool
 
 func modifyBool(n bool) bool {
@@ -53,7 +57,7 @@ fmt.Println("Function call:",  modifyBool(old))         // true
 fmt.Println("After function call: ", old)               // false
 ```
 
-```
+```go
 # string
 
 func modifyString(n string) string {
@@ -66,7 +70,7 @@ fmt.Println("Function call:", modifyString(message))   // My favourite language 
 fmt.Println("After function call: ", message)          // Go
 ```
 
-```
+```go
 # array
 
 func modifyArray(coffee [3]string) [3]string {
@@ -80,7 +84,7 @@ fmt.Println("Function call:", modifyArray(country))    // [nigeria egypt germany
 fmt.Println("After function call: ", country)          // [nigeria egypt sweden]
 ```
 
-```
+```go
 # struct
 
 func modifyStruct(p profile) profile {
@@ -110,7 +114,7 @@ There is an understanding/debate of whether Go composite types are passed to fun
 
 Before we move on to some examples of how Go function treats the Composite types (Slice, and Map), Channel, Pointer, and function, let us take a look at this snippet of code that confirms Go composite types are not Passed-By-Reference:
 
-```
+```go
 package main
 
 import "fmt"
@@ -140,7 +144,7 @@ You can read more on this topic in this [GREAT Dave Cheney’s blog.](https://da
 
 Below are the example of passing the Composite types and other types (asides from Primitive types discussed above) in Go:
 
-```
+```go
 # slice
 
 func modifySlice(coffee []string) []string {
@@ -154,7 +158,7 @@ fmt.Println("Function call:", modifySlice(coffeeBox))    // [egyptian_coffee tur
 fmt.Println("After function call: ", coffeeBox)          // [egyptian_coffee turkish_coffee brazilian_coffee]
 ```
 
-```
+```go
 # map
 
 func modifyMap(expenses map[string]int) map[string]int {
@@ -172,7 +176,7 @@ fmt.Println("Function call:", modifyMap(expenses))      //  map[food:4500 rent:1
 fmt.Println("After function call: ", expenses)          //  map[food:4500 rent:100 transport:30]
 ```
 
-```
+```go
 # pointer
 
 func ModifyBasicTypes(name *string, age *int, cash *float64, techInterest *bool, countries *[3]string, myProfile *profile) {
@@ -189,7 +193,7 @@ func ModifyBasicTypes(name *string, age *int, cash *float64, techInterest *bool,
 	}
 }
 
-myProfile=  profile{
+myProfile = profile{
 	Age:          0,
 	Name:         "",
 	Salary:       0,
@@ -222,7 +226,7 @@ fmt.Println("After function call: ", message, age, cash, old, country, myProfile
 <!--fmt.Println("After function call: ", anon(msg))-->
 <!--```-->
 
-```
+```go
 # channel
 func modifyChannel(s chan string) {
 	s <- "INJECTING A NEW MESSAGE"
@@ -236,8 +240,8 @@ Running through the examples above, we can see the effect of passing parameters 
 If you find yourself in need of modifying the value of a basic type (int, float, bool, etc), simply pass the variable's memory address to the function (in other words, treat the parameter as a pointer). The pointer section clearly exemplifies this scenario.
 
 ## Summary:
-Go supports the Pass-By-Value sematic; when arguments are passed by value, the function receives a copy of each argument - modifications to the copy do not affect the caller. On the other hand, It does not support Pass-By-Reference. But, it does support Pass-by-Pointer which can be used to modify the underlying argument's value.
+Go supports the Pass-By-Value semantic; when arguments are passed by value, the function receives a copy of each argument - modifications to the copy do not affect the caller. On the other hand, it does not support Pass-By-Reference. But, it does support Pass-by-Pointer which can be used to modify the underlying argument's value.
 
-In this short blog, we have explored the two ways of how Go treats parameters passed to its function. 
+In this short blog, we have explored the two ways how Go treats parameters passed to its functions. 
 It is very important to be aware of this concept so as to avoid false/wrong expectations. 
 Till the next blog, keep Go-ing :)
