@@ -1,8 +1,37 @@
 [build]
 publish = "public"
-command = "hugo"
+command = "hugo --minify"
 
-[context.production.environment]
-HUGO_VERSION = "0.57.2"
+[build.environment]
+HUGO_VERSION = "0.119.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+NODE_VERSION = "18"
+NPM_FLAGS = "--production"
+
+[context.production.environment]
+HUGO_VERSION = "0.119.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+NODE_VERSION = "18"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.119.0"
+HUGO_ENV = "production"
+NODE_VERSION = "18"
+
+[context.branch-deploy.environment]
+HUGO_VERSION = "0.119.0"
+HUGO_ENV = "production"
+NODE_VERSION = "18"
+
+# Disable problematic plugins and features
+[[plugins]]
+
+# Headers for security and performance
+[[headers]]
+for = "/*"
+[headers.values]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
