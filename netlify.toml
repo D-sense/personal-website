@@ -11,6 +11,3 @@ NODE_VERSION = "18"
 [build.environment]
 HUGO_VERSION = "0.121.0"
 NODE_VERSION = "18"
-
-# Disable auto-plugin installation to prevent Node.js dependency issues
-[[plugins]]
