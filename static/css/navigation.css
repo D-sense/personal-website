@@ -33,8 +33,8 @@
 .nav-link {
   color: var(--grey);
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
   padding: 0.5rem 0;
   transition: all 0.2s ease;
   position: relative;
@@ -54,7 +54,7 @@
 
 .nav-link.active {
   color: var(--primary);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .nav-link.active::after {
@@ -114,6 +114,6 @@
   }
   
   .nav-link {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 }
