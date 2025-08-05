@@ -1,0 +1,10 @@
+{{/* Hero image credit partial */}}
+{{ if or .Params.hero_credit .Params.hero_source }}
+<div class="hero-image-credit">
+    {{ if .Params.hero_source }}
+        <a href="{{ .Params.hero_source }}" target="_blank" rel="noopener">{{ .Params.hero_credit | default "Photo Credit" }}</a>
+    {{ else }}
+        {{ .Params.hero_credit }}
+    {{ end }}
+</div>
+{{ end }}

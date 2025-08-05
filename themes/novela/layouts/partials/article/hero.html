@@ -1,0 +1,27 @@
+<section id="articleHero" class="section narrow">
+    <div class="article-hero">
+        <header class="article-header">
+            <h1 class="article-hero-heading">{{ .Page.Params.Title }}</h1>
+            <div class="article-hero-subtitle">
+                <div class="article-meta">
+                    {{ partial "article/authors.html" . }}
+                    {{ .Page.Date.Format "January 2, 2006" }}
+                    {{ with .Page.Params.timetoread }} • {{ . }} min read{{ end }}
+                </div>
+                {{ if .Page.Params.tags }}
+                <div class="article-tags">
+                    {{ range .Page.Params.tags }}
+                    <span class="article-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </header>
+        {{ with .Page.Params.hero }}
+        <div class="article-hero-image" id="ArticleImage__Hero" style="position: relative;">
+            <img src="{{ . }}">
+            {{ partial "hero-credit.html" $.Page }}
+        </div>
+        {{ end }}
+    </div>
+</section>

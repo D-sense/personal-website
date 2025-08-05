@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<section class="section narrow">
+    <div class="article-hero" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
+        <header class="article-header" style="text-align: center; margin: 0 !important; padding: 0 !important;">
+            <h1 class="article-hero-heading" style="text-align: center; margin: 0 0 0.5rem 0 !important; padding: 0 !important;">{{ .Title }}</h1>
+            
+            {{ if .Params.avatar }}
+            <div class="about-avatar">
+                <img src="{{ .Params.avatar }}" alt="{{ .Title }}" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);">
+            </div>
+            {{ end }}
+        </header>
+    </div>
+
+    <article id="articleContent" class="post-content" style="margin-top: 0 !important; padding-top: 0 !important;">
+        {{ .Content }}
+    </article>
+</section>
+
+{{ end }}
