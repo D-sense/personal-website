@@ -1,6 +1,6 @@
 ---
-linktitle: Building smart agent
-title: "Building Smart Agent"
+linktitle: Building a smart, agentic email assistant
+title: "Building a smart, agentic email assistant"
 date: 2025-02-05T22:34:17+01:00
 categories: ["Go", "Golang"]
 tags: ["ai", "llm", "agent", "go", "backend"]
