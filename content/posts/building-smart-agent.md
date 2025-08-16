@@ -2,8 +2,8 @@
 linktitle: Building a smart, agentic email assistant
 title: "Building a smart, agentic email assistant"
 date: 2025-02-05T22:34:17+01:00
-categories: ["Go", "Golang"]
-tags: ["ai", "llm", "agent", "go", "backend"]
+categories: ["AI", "LLM", "Go", "Golang"]
+tags: ["ai", "llm", "agent", "go", "golang", "backend"]
 weight: 10
 hero: https://d2908q01vomqb2.cloudfront.net/1b6453892473a467d07372d45eb05abc2031647a/2025/08/13/compute2373-2.png
 hero_credit: "AWS Blog"
